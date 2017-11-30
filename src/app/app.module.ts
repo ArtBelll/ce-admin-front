@@ -6,7 +6,7 @@ import { MatFormFieldModule, MatInputModule, MatIcon, MatIconModule, MatCardModu
 import { AppComponent } from './app-root/app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
-import { MainComponent } from './main/main.component';
+import { ProfileComponent } from './profile/profile.component';
 import { LoginComponent } from './login/login.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 
@@ -14,7 +14,7 @@ import { MainMenuComponent } from './main-menu/main-menu.component';
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent,
+    ProfileComponent,
     LoginComponent,
     MainMenuComponent
   ],
