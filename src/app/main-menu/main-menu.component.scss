@@ -1,0 +1,10 @@
+.navbar-collapse {
+    display: none;
+    &.show {
+        display: block;
+    }
+}
+
+.navbar-toggler-icon {
+    cursor: pointer;
+}
