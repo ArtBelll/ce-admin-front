@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'profile',
-    templateUrl: 'profie.component.html'
+    templateUrl: 'profile.component.html'
 })
 
 export class ProfileComponent implements OnInit {
