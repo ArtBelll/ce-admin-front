@@ -1,4 +1,4 @@
-@import url(~@angular/material/prebuilt-themes/purple-green.css);
+@import url(~@angular/material/prebuilt-themes/deeppurple-amber.css);
 @-ms-viewport {
   width: device-width; }
 html {
@@ -2248,5 +2248,14 @@ template {
 
 [hidden] {
   display: none !important; }
+
+html {
+  height: 100%; }
+
+body {
+  min-height: 100%; }
+
+.display-flex {
+  display: flex; }
 
 /*# sourceMappingURL=styles.css.map */

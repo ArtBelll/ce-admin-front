@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatFormFieldModule, MatInputModule, MatIcon, MatIconModule } from '@angular/material';
+import { MatFormFieldModule, MatInputModule, MatIcon, MatIconModule, MatCardModule } from '@angular/material';
 import { AppComponent } from './app-root/app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
@@ -25,7 +25,8 @@ import { MainMenuComponent } from './main-menu/main-menu.component';
     MatFormFieldModule,
     MatInputModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
