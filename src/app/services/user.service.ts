@@ -8,7 +8,14 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class UserService {
+
+    readonly TOKEN = 'X-EventCalendar-Token';
+
     constructor(private httpClient: HttpClient) { }
+
+    isAuth(): boolean {
+        return localStorage.getItem(this.TOKEN) !== null;
+    }
 
     getMe(): Observable<User> {
         return this.httpClient.get('users/me')
