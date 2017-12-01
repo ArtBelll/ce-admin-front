@@ -2255,6 +2255,9 @@ html {
 body {
   min-height: 100%; }
 
+button:focus {
+  outline: none; }
+
 .display-flex {
   display: flex; }
 

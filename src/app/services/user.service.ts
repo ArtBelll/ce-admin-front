@@ -1,24 +1,33 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { User } from '../modeles/user';
 import { Observable } from 'rxjs';
 
 import 'rxjs/add/operator/map';
+import { Constants } from '../constants';
 
 @Injectable()
 export class UserService {
 
-    readonly TOKEN = 'X-EventCalendar-Token';
-
     constructor(private httpClient: HttpClient) { }
 
-    isAuth(): boolean {
-        return localStorage.getItem(this.TOKEN) !== null;
+    login(email: string, password: string): Observable<void> {
+        return this.httpClient.request<void>('post', 'auth/login',
+            {
+                body:
+                    {
+                        email: email,
+                        password: password
+                    },
+                observe: 'response'
+            })
+            .map(response => {
+                localStorage.setItem(Constants.TOKEN, response.body['token']);
+            });
     }
 
     getMe(): Observable<User> {
-        return this.httpClient.get('users/me')
-            .map(response => <User> response);
+        return this.httpClient.get<User>('users/me');
     }
 }
