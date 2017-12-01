@@ -2,15 +2,11 @@ $gutter: 30px;
 
 .login-form {
     display: block;
-    position: fixed;
     width: calc(100% - #{$gutter} * 2);
     max-width: 400px;
-    margin: 0 $gutter;
-    top: 50%;
-    left: calc(50% - #{$gutter});
-    transform: translate(-50%, -50%);
-}
+    margin: 100px auto;
 
-.mat-form-field {
-    display: block;
+    .mat-input-container {
+        display: block;
+    }
 }

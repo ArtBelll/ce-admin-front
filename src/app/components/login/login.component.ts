@@ -23,9 +23,4 @@ export class LoginComponent implements OnInit {
         this.userService.login(this.email, this.password)
             .subscribe(user => this.router.navigate(['']));
     }
-
-    getMe() {
-        this.userService.getMe()
-            .subscribe(user => console.log(user));
-    }
 }

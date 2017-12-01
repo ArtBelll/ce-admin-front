@@ -2249,12 +2249,6 @@ template {
 [hidden] {
   display: none !important; }
 
-html {
-  height: 100%; }
-
-body {
-  min-height: 100%; }
-
 button:focus {
   outline: none; }
 

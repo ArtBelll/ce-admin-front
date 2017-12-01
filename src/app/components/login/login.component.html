@@ -1,12 +1,12 @@
 <mat-card class="login-form" (keyup.enter)="login()">
     <mat-card-title>Войти</mat-card-title>
-    <mat-form-field class="full-width">
+    <mat-form-field>
         <input [(ngModel)]="email" matInput placeholder="Enter your email">
     </mat-form-field>
-    <mat-form-field class="full-width">
+    <mat-form-field>
         <input [(ngModel)]="password" matInput placeholder="Enter your password" [type]="hidePassword ? 'password' : 'text'">
         <mat-icon matSuffix (click)="hidePassword = !hidePassword">{{hidePassword ? 'visibility' : 'visibility_off'}}</mat-icon>
     </mat-form-field>
     <button (click)="login()" mat-raised-button color="primary">Вход</button>
-    <button (click)="getMe()" mat-raised-button color="warn">Создать аккаунт</button>
+    <button mat-raised-button color="warn">Создать аккаунт</button>
 </mat-card>
