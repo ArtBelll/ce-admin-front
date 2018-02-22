@@ -14,6 +14,7 @@ import { APIInterceptor } from './services/api-interceptor';
 import { AuthGuard } from './guards/auth-guard';
 import { UserService } from './services/user.service';
 import { HttpClientModule } from '@angular/common/http/';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http/';
     AppComponent,
     ProfileComponent,
     LoginComponent,
-    MainMenuComponent
+    MainMenuComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

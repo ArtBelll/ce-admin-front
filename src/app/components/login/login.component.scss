@@ -4,7 +4,7 @@ $gutter: 30px;
     display: block;
     width: calc(100% - #{$gutter} * 2);
     max-width: 400px;
-    margin: 100px auto;
+    margin: 0 auto;
 
     .mat-input-container {
         display: block;

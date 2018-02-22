@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 
 import 'rxjs/add/operator/map';
 import { Constants } from '../constants';
+import { Organisation } from '../modeles/organisation';
 
 @Injectable()
 export class UserService {
@@ -25,6 +26,10 @@ export class UserService {
             .map(response => {
                 localStorage.setItem(Constants.TOKEN, response.body['token']);
             });
+    }
+
+    signUp(organisation: Organisation): Observable<void> {
+        return this.httpClient.post<void>(§)
     }
 
     getMe(): Observable<User> {
